@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
-import Keyboard from '../components/Keyboard';
-import Screen from '../components/Screen';
+import LedNumber from './LedNumber';
 
-class Intercom extends Component {
+export default class Screen extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -13,11 +12,11 @@ class Intercom extends Component {
   render() {
     return (
       <View>
-        <Screen sign={4}/>
-        <Keyboard/>
+        <LedNumber/>
+        <LedNumber/>
+        <LedNumber/>
+        <LedNumber/>
       </View>
     );
   }
 }
-
-export default Intercom;

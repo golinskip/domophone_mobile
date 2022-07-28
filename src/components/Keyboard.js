@@ -13,24 +13,24 @@ class Keyboard extends Component {
     return (
       <View style={styles.keyWrap}>
         <View style={styles.keyRow}>
-          <Key style={styles.key}>1</Key>
-          <Key style={styles.key}>2</Key>
-          <Key style={styles.key}>3</Key>
+          <Key style={styles.key} value="1">1</Key>
+          <Key style={styles.key} value="2">2</Key>
+          <Key style={styles.key} value="3">3</Key>
         </View>
         <View style={styles.keyRow}>
-          <Key style={styles.key}>4</Key>
-          <Key style={styles.key}>5</Key>
-          <Key style={styles.key}>6</Key>
+          <Key style={styles.key} value="4">4</Key>
+          <Key style={styles.key} value="5">5</Key>
+          <Key style={styles.key} value="6">6</Key>
         </View>
         <View style={styles.keyRow}>
-          <Key style={styles.key}>7</Key>
-          <Key style={styles.key}>8</Key>
-          <Key style={styles.key}>9</Key>
+          <Key style={styles.key} value="7">7</Key>
+          <Key style={styles.key} value="8">8</Key>
+          <Key style={styles.key} value="9">9</Key>
         </View>
         <View style={styles.keyRow}>
-          <Key style={styles.key}>L</Key>
-          <Key style={styles.key}>0</Key>
-          <Key style={styles.key}>C</Key>
+          <Key style={styles.key} value="L">L</Key>
+          <Key style={styles.key} value="0">0</Key>
+          <Key style={styles.key} value="C">C</Key>
         </View>
       </View>
     );

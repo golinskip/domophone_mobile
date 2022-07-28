@@ -1,4 +1,7 @@
-const initialState = {};
+const initialState = {
+    lastButton: null,
+    history: new Array()
+};
 
 export default (state = initialState, action) => {
     switch(action.type) {

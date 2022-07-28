@@ -1,7 +1,10 @@
 import React, {Component} from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
+import { buttonClick } from '../actions/Intercom';
 
 class Key extends Component {
+  
+
   constructor(props) {
     super(props);
     this.state = {
@@ -10,8 +13,8 @@ class Key extends Component {
 
   render() {
     return (
-      <TouchableOpacity onPress={() => {  }}
-				onLongPress={() => {  }}
+      <TouchableOpacity 
+      onPress={() => buttonClick(this.props.value)}
 			>
         <Text style={styles.textBox}>{this.props.children}</Text>
       </TouchableOpacity>
