@@ -12,11 +12,19 @@ class Intercom extends Component {
 
   render() {
     return (
-      <View>
-        <Screen sign={4}/>
+      <View style={styles.intercomContainer}>
+        <Screen signCount={4}/>
         <Keyboard/>
       </View>
     );
+  }
+}
+
+const styles = {
+  intercomContainer: {
+    height: '100%',
+        alignItems:'center',
+        justifyContent:'center'
   }
 }
 

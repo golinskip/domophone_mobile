@@ -11,7 +11,7 @@ export default class LedNumber extends Component {
 
   render() {
     return (
-        <Text> X </Text>
+        <Text>{this.props.sign}</Text>
     );
   }
 }

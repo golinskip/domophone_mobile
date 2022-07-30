@@ -12,7 +12,7 @@ export default function App() {
   return (
     <Provider store={store}>
       <View style={styles.container}>
-        <Intercom></Intercom>
+        <Intercom />
       </View>
     </Provider>
   );
