@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { View, Text } from 'react-native';
 import Key from './Key';
+import KEYSET from '../const';
 
 class Keyboard extends Component {
   constructor(props) {
@@ -35,6 +36,7 @@ class Keyboard extends Component {
       </View>
     );
   }
+  
 }
 
 const styles= {

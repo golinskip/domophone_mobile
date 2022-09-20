@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
-import { buttonClick } from '../actions/Intercom';
+import { buttonClick } from '../actions/index';
+import { connect } from 'react-redux';
 
 class Key extends Component {
   
@@ -14,7 +15,7 @@ class Key extends Component {
   render() {
     return (
       <TouchableOpacity 
-      onPress={() => buttonClick(this.props.value)}
+      onPress={() => this.props.buttonClick(this.props.value)}
 			>
         <Text style={styles.textBox}>{this.props.children}</Text>
       </TouchableOpacity>
@@ -41,4 +42,4 @@ const styles = {
     }
 }
 
-export default Key;
+export default connect(null,  { buttonClick })(Key);

@@ -1,10 +1,9 @@
-const TYPE_BUTTON_CLICK = 'BUTTON_CLICK';
+import ACTION_BUTTON_CLICK from '../const';
 
 export function buttonClick(button) {
+    console.log('Button clicked: '+button);
     return {
-        type: TYPE_BUTTON_CLICK,
-        payload: {
-            button: button,
-        }
+        type: ACTION_BUTTON_CLICK,
+        payload: button,
     }
 }

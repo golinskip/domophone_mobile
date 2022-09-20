@@ -1,26 +1,31 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 import LedNumber from './LedNumber';
+import { connect } from 'react-redux';
 
-export default class Screen extends Component {
+class Screen extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      signs: [2,4,3,5,4,3,2,3,4,5,2]
     };
-  }
-
-  writeLeds() {
-    return Array(this.props.signCount).fill(null).map((val, key) => {
-      return <LedNumber key={key} sign={this.state.signs[key]}/>;
-    });
   }
 
   render() {
     return (
       <View>
-        {this.writeLeds()}
+        <LedNumber sign={this.props.screenState[0]}/>
+        <LedNumber sign={this.props.screenState[1]}/>
+        <LedNumber sign={this.props.screenState[2]}/>
+        <LedNumber sign={this.props.screenState[3]}/>
       </View>
     );
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    screenState: state.intercom.screenState
+  }
+}
+
+export default connect(mapStateToProps)(Screen)
