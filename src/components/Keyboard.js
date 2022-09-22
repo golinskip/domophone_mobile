@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { View, Text } from 'react-native';
+import { KEYSET } from '../const';
 import Key from './Key';
-import KEYSET from '../const';
 
 class Keyboard extends Component {
   constructor(props) {
@@ -14,24 +14,24 @@ class Keyboard extends Component {
     return (
       <View style={styles.keyWrap}>
         <View style={styles.keyRow}>
-          <Key style={styles.key} value="1">1</Key>
-          <Key style={styles.key} value="2">2</Key>
-          <Key style={styles.key} value="3">3</Key>
+          <Key style={styles.key} value={KEYSET.KEY_1}>1</Key>
+          <Key style={styles.key} value={KEYSET.KEY_2}>2</Key>
+          <Key style={styles.key} value={KEYSET.KEY_3}>3</Key>
         </View>
         <View style={styles.keyRow}>
-          <Key style={styles.key} value="4">4</Key>
-          <Key style={styles.key} value="5">5</Key>
-          <Key style={styles.key} value="6">6</Key>
+          <Key style={styles.key} value={KEYSET.KEY_4}>4</Key>
+          <Key style={styles.key} value={KEYSET.KEY_5}>5</Key>
+          <Key style={styles.key} value={KEYSET.KEY_6}>6</Key>
         </View>
         <View style={styles.keyRow}>
-          <Key style={styles.key} value="7">7</Key>
-          <Key style={styles.key} value="8">8</Key>
-          <Key style={styles.key} value="9">9</Key>
+          <Key style={styles.key} value={KEYSET.KEY_7}>7</Key>
+          <Key style={styles.key} value={KEYSET.KEY_8}>8</Key>
+          <Key style={styles.key} value={KEYSET.KEY_9}>9</Key>
         </View>
         <View style={styles.keyRow}>
-          <Key style={styles.key} value="L">L</Key>
-          <Key style={styles.key} value="0">0</Key>
-          <Key style={styles.key} value="C">C</Key>
+          <Key style={styles.key} value={KEYSET.KEY_L}>L</Key>
+          <Key style={styles.key} value={KEYSET.KEY_0}>0</Key>
+          <Key style={styles.key} value={KEYSET.KEY_C}>C</Key>
         </View>
       </View>
     );

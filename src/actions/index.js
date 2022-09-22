@@ -1,9 +1,25 @@
-import ACTION_BUTTON_CLICK from '../const';
+import { KEYSET, SOUNDSET, TYPE_CLEAR_NUMBER, TYPE_KEY_BUTTON, TYPE_WRITE_NUMBER } from '../const';
+import clickPlayer from '../lib/clickPlayer';
 
 export function buttonClick(button) {
-    console.log('Button clicked: '+button);
+    clickPlayer(button);
+
+    if(button == KEYSET.KEY_C) {
+        return {
+          type: TYPE_CLEAR_NUMBER,
+          payload: button,
+      }
+    }
+
+    if(button == KEYSET.KEY_L) {
+        return {
+          type: TYPE_KEY_BUTTON,
+          payload: button,
+      }
+    }
+
     return {
-        type: ACTION_BUTTON_CLICK,
+        type: TYPE_WRITE_NUMBER,
         payload: button,
     }
 }

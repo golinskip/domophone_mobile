@@ -1,5 +1,4 @@
-import TYPE_BUTTON_CLICK from '../const';
-import KEYSET from '../const';
+import { TYPE_WRITE_NUMBER, TYPE_CLEAR_NUMBER, KEYSET, TYPE_KEY_BUTTON } from '../const';
 
 const initialState = {
     lastButton: null,
@@ -8,7 +7,7 @@ const initialState = {
 
 export default (state = initialState, action) => {
     switch(action.type) {
-        case TYPE_BUTTON_CLICK:
+        case TYPE_WRITE_NUMBER:
             return {
                 lastButton: action.payload,
                 screenState: [
@@ -18,7 +17,16 @@ export default (state = initialState, action) => {
                     state.screenState[2]
                 ],
             };
-
+        case TYPE_CLEAR_NUMBER:
+            return {
+                lastButton: action.payload,
+                screenState: [KEYSET.EPMTY,KEYSET.EPMTY,KEYSET.EPMTY,KEYSET.EPMTY],
+            };
+        case TYPE_KEY_BUTTON:
+            return {
+                lastButton: action.payload,
+                screenState: state.screenState
+            };
         default:
             return state;
     }
